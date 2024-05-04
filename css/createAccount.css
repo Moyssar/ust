@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.marg-5-0 {
+  margin: 5px 0;
+}
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+.header {
+  margin-bottom: 80px;
+  width: 100%;
+}
+.headerImg {
+  max-width: 100%;
+  height: 150px;
+  text-align: center;
+}
+.header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.ratio {
+  text-align: center;
+}
+.h6 {
+  font-size: 20px;
+  font-weight: 400;
+  display: inline;
+}
+.h6:first-of-type {
+  margin-right: 50px;
+}
+.form {
+  margin-top: 25px;
+  padding: 20px 20px 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  justify-content: space-between;
+}
+label {
+  height: 35px;
+  font-size: 20px;
+  color: #333;
+  display: block;
+}
+.form input:not([type="submit"]) {
+  padding: 5px;
+}
+.form input,
+.form select {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+option {
+  padding: 5px 2px;
+}
+.submit {
+  margin: 40px 0 -10px;
+  background-color: #0095ff !important;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.submit:hover {
+  cursor: pointer;
+}
+
+/* **Tablat designe** */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 30px;
+    max-width: 900px;
+    text-align: center;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .ratio {
+    padding: 0 25px;
+  }
+  .h6 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .h6:first-of-type {
+    margin-right: 30px;
+  }
+  .form {
+    /* text-align: center; */
+    margin-top: 10px;
+    padding: 20px 20px;
+  }
+  .form form {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  label {
+    margin: 10px 0 -10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .form input,
+  .form select {
+    width: 250px;
+    height: 35px;
+  }
+  .submit {
+    margin: 40px auto 20px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+/* **Mobile designe** */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .header {
+    margin-bottom: 70px;
+  }
+  .ratio {
+    padding: 0 15px;
+    margin: auto;
+    width: fit-content;
+  }
+  .ratio input {
+    display: block;
+  }
+  .ratioName,
+  .ratioName-Patch {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+  }
+  .h6 {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .form {
+    margin-top: 0px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+  }
+  .form form {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  label {
+    margin: 10px 0 -10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .form input,
+  .form select {
+    background: #eee;
+    width: 320px;
+    height: 35px;
+  }
+  .submit {
+    margin: 25px auto 15px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

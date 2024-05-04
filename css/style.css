@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.marg-5-0 {
+  margin: 5px 0;
+}
+.container {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+.header {
+  margin-bottom: 80px;
+  width: 100%;
+}
+.headerImg {
+  max-width: 100%;
+  height: 150px;
+  text-align: center;
+}
+.header img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.title {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.title::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  transform: translate(0, -50%);
+  opacity: 0.5;
+}
+.title::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  right: -35px;
+  transform: translate(0, -50%);
+  opacity: 0.5;
+}
+.form {
+  margin-top: 25px;
+  padding: 20px 20px 25px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: #eee;
+  overflow: hidden;
+}
+.form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  justify-content: space-between;
+}
+label {
+  height: 35px;
+  font-size: 20px;
+  color: #333;
+  display: block;
+  transition: all 250ms ease-in-out;
+  font-weight: 500;
+}
+/* label:has(+ .userIn:focus) {
+  color: #0095ff;
+  font-weight: 600;
+  text-shadow: 0px 0px 1px #fff, 0px 0px 5px #0055ff;
+}
+label:has(+ .passIn:focus) {
+  color: #ff2828;
+  font-weight: 600;
+  text-shadow: 0px 0px 1px #fff, 0px 0px 5px #ff2828;
+} */
+
+.form input:not([type="submit"]) {
+  padding: 5px;
+}
+.or,
+.create,/*the create account botton*/
+.reset,/*the password reset botton*/
+.form input {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.or,
+.create,/*the create account botton*/
+.reset,/*the password reset botton*/
+.submit {
+  margin: 40px 0 -10px;
+  background-color: #0095ff !important;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.create,/*the create account botton*/
+.reset/*the password reset botton*/ {
+  margin-left: auto;
+  margin-right: auto;
+}
+.create /*the create account botton*/ {
+  color: #0095ff;
+  background-color: #fff !important;
+  text-align: center;
+  padding-top: 2px;
+}
+.reset /*the password reset botton*/ {
+  color: #ff2828;
+  background-color: #fff !important;
+  text-align: center;
+  padding-top: 2px;
+}
+.submit:hover,
+.create:hover,
+.reset:hover {
+  cursor: pointer;
+}
+.or {
+  display: none;
+  background-color: transparent !important;
+  border: none;
+}
+/* **Tablat designe** */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 30px;
+    max-width: 900px;
+    text-align: center;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+  .form {
+    /* text-align: center; */
+    margin-top: 10px;
+    padding: 20px 20px;
+  }
+  .form form {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  label {
+    margin: 10px 0 -10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .or {
+    display: none;
+    background-color: transparent !important;
+    border: none;
+  }
+  .or::after {
+    opacity: 0;
+  }
+  .or::before {
+    opacity: 0;
+  }
+  .or,/************************************/
+  .reset,/*********************************/
+  .create,/********************************/
+  .form input {
+    width: 250px;
+    height: 35px;
+  }
+  .create,/*the create account botton*/
+  .reset,/*the password reset botton*/ 
+  .submit {
+    margin: 40px auto 20px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .create,/*the create account botton*/
+.reset/*the password reset botton*/ {
+    padding-top: 5px;
+  }
+}
+/* **Mobile designe** */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+  .header {
+    margin-bottom: 0;
+  }
+  .form {
+    margin-top: 0px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  .form form {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  label {
+    margin: 10px 0 -10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .or,/************************************/
+  .reset,/*********************************/
+  .create,/********************************/
+  .form input,
+  .form select {
+    background: #eee;
+    width: 320px;
+    height: 35px;
+  }
+  .or,
+  .create,/*the create account botton*/
+  .reset,/*the password reset botton*/ 
+  .submit {
+    margin: 25px auto 15px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .or {
+    display: block;
+    background-color: transparent !important;
+    position: relative;
+  }
+  .or::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    inset: 0;
+    top: 50%;
+    border-radius: 2px;
+    position: absolute;
+    opacity: 1;
+  }
+  .or::after {
+    content: "or";
+    inset: 0;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    font-weight: 400;
+    font-size: 15px;
+    width: 30px;
+    height: 27px;
+    padding-top: 3px;
+    border-radius: 50%;
+    color: #999;
+    background-color: #fff;
+    position: absolute;
+    opacity: 1;
+  }
+  .create,/*the create account botton*/
+.reset/*the password reset botton*/ {
+    padding-top: 7px;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/searchByCard.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="headerImg">
+          <img src="images/1706625197081.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="ratio">
+        <div class="ratioName">
+          <input type="radio" name="SearchRatio" id="SearchByName" />
+          <label class="h6" for="SearchByName">Search by name</label>
+        </div>
+        <div class="ratioName-Patch">
+          <input type="radio" name="SearchRatio" id="SearchByName-Patch" />
+          <label class="h6" for="SearchByName-Patch"
+            >Search by first name and patch</label
+          >
+        </div>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="selectors block marg-5-0">
+            <label for="collage">Collage</label>
+            <select class="college" id="college">
+              <option value="engineering">كلية الهندسة</option>
+              <option value="pharmacy">كلية الصيدلة</option>
+              <option value="adminstrative">كلية العلوم الادارسة</option>
+              <option value="laboratory">كلية علوم المختبرات الطبية</option>
+              <option value="medical">كلية الطب</option>
+              <option value="IT">كلية علوم الحاسوب و تقانة المعلومات</option>
+              <option value="dentistry">كلية طب الاسنان</option>
+              <option value="nursing">التمريص</option>
+            </select>
+          </div>
+          <div class="selectors block marg-5-0">
+            <label for="dep">Department</label>
+            <select class="dep" id="dep">
+              <option value="">Architecture and Spatial Panning</option>
+              <option value="">Chemecal Engineering</option>
+              <option value="">Civil engineering</option>
+              <option value="">Communication Systems Engineering</option>
+              <option value="">
+                Electonic and Computer Systems Engineering
+              </option>
+              <option value="">Electonic Systems Software Engineering</option>
+              <option value="">Medical Engineering</option>
+            </select>
+          </div>
+          <div class="name block marg-5-0">
+            <label for="name">First name</label>
+            <input type="text" class="name" />
+          </div>
+          <div class="patch block marg-5-0">
+            <label for="pat">Patch</label>
+            <input type="text" class="pat" />
+          </div>
+          <input type="submit" value="Search" class="submit" />
+        </form>
+      </div>
+    </div>
+    <script src="js/searchByCard.js"></script>
+  </body>
+</html>
